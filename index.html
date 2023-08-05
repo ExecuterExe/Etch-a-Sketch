@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-Sketch</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="title-block">
+                <p class="title">Etch-a-Sketch</p>
+            </div>
+        </header>
+        <main>
+            <div class="left-menu">
+                <div class="choice-color">
+                    <input type="color" id="pen-color">
+                    <span> - color pen</span>
+                </div>
+                <div class="black-mode">
+                    <button class="btn-black-mode standart-template-btn">Black mode</button>
+                </div>
+                <div class="rainbow-mode">
+                    <button class="btn-rainbow-mode standart-template-btn">Rainbow mode</button>
+                </div>
+                <div class="shading-mode">
+                    <button class="btn-shading-mode standart-template-btn">Shading mode</button>
+                </div>
+                <div class="lighting-mode">
+                    <button class="btn-shading-mode standart-template-btn">Lighting mode</button>
+                </div>
+                <div class="eraser">
+                    <button class="btn-eraser standart-template-btn">Eraser</button>
+                </div>
+                <div class="grid-size">
+                    <input type="range" name="" id="grid-range" min="1" max="64" value="1">
+                    <p class="grid-size-visible"><span class="value-grid-size"></span>x<span
+                            class="value-grid-size"></span></p>
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-element"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="copyright-block">
+                <p class="copyright">Copyright © 2023 ExecuterExe</p>
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
