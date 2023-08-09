@@ -30,6 +30,7 @@ main {
 }
 
 .left-menu {
+    box-shadow: 12px 20px #4c408f;
     background-color: rgb(112, 146, 190);
     border-radius: 63px;
     width: 400px;
@@ -60,6 +61,11 @@ main {
     opacity: 0.95;
 }
 
+.btn-active {
+    background-color: #c5c349;
+    opacity: 0.7;
+}
+
 #grid-range {
     accent-color: rgb(255, 201, 14);
 }
@@ -70,13 +76,14 @@ main {
 }
 
 .grid-container {
+    box-shadow: 1px 2px 2px #000000;
     background-color: white;
     border: 2px solid black;
     width: 760px;
     height: 700px;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 }
 
 .grid-container>* {
