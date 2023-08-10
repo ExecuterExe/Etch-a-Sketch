@@ -75,6 +75,11 @@ main {
     text-align: center;
 }
 
+.grid-size {
+    margin: 0;
+}
+
+
 .grid-container {
     box-shadow: 1px 2px 2px #000000;
     background-color: white;
@@ -91,8 +96,8 @@ main {
 }
 
 
-/* .copyright-block {
-    position: absolute;
+.copyright-block {
+    position: relative;
     bottom: 0;
     left: 0;
     display: flex;
@@ -106,4 +111,4 @@ main {
 .copyright {
     font-size: 20px;
     font-weight: 700;
-} */
+}
