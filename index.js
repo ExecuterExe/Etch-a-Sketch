@@ -1,5 +1,9 @@
 'use strict'
 
+// На будущее: реализовать закраску ячеек с ПЕРВОЙ ячейки, 
+// на которую приходится зажатие мыши
+// (сейчас она на второй)
+
 const range = document.getElementById('grid-range');
 const valueDisplay = document.querySelector('.value-grid-size');
 const gridContainer = document.querySelector('.grid-container');
@@ -67,6 +71,9 @@ function toggleActiveClasses(e) {
     })
     e.classList.add('btn-active');
     interactionWithGrid();
+
+    cancelDragHandlerFromGrid(gridElements)
+    cancelDrag(gridElements)
 }
 
 
@@ -85,11 +92,18 @@ function interactionWithGrid() {
     } if (btnClearAll.classList.contains('btn-active')) {
         launchClearAll()
     }
+
+    gridElements.forEach(gridElement => {
+        gridElement.addEventListener('dragstart', function cancelDragEvent(event) {
+            event.preventDefault();
+        });
+    })
 }
 
 function launchColorMode() {
     gridElements.forEach(gridElement => {
-        gridElement.addEventListener('mouseover', handleColorMode);
+        gridElement.addEventListener('mouseover', handleColorMode
+        );
     });
     document.addEventListener('mousedown', () => {
         isDrawing = true;
@@ -98,6 +112,7 @@ function launchColorMode() {
         isDrawing = false;
     });
 }
+
 
 function handleColorMode(event) {
     if (isDrawing) {
